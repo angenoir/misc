@@ -173,17 +173,3 @@ shift
 done
 run
 ## END OF THE RUN BLOCK
-
-
-## TESTS
-test() {
-echo " "
-echo " "
-echo "*****************************"
-echo "************TEST*************"
-echo "*****************************"
-echo $WARNING_THRESHOLD
-echo $CRITICAL_THRESHOLD
-}
-
-#test
