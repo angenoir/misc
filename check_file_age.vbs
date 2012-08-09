@@ -1,11 +1,12 @@
 Option Explicit  
-Dim fso, path, file, recentDate, recentFile, warning , critical, dateExec, pipe
+Dim fso, path, file, recentDate, recentFile, warning , critical, dateExec, pathToMonitor
 dateExec = now
 warning = clng(WScript.Arguments.Named("w"))
 critical = clng(WScript.Arguments.Named("c"))
+pathToMonitor = WScript.Arguments.Named("p")
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set recentFile = Nothing
-For Each file in fso.GetFolder("C:\test").Files
+For Each file in fso.GetFolder(pathToMonitor).Files
   If (recentFile is Nothing) Then
     Set recentFile = file
   ElseIf (file.DateLastModified > recentFile.DateLastModified) Then
