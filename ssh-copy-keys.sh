@@ -8,4 +8,4 @@ read -p "Enter your login name  :" login_name
 
 # Copy the generated key.
 echo Copying keys to ${host_name}
-ssh-copy-id -i ~/.ssh/id_dsa ${login_name}@${host_name}
+ssh-copy-id -i ~/.ssh/id_rsa ${login_name}@${host_name}
