@@ -19,11 +19,11 @@ if [ $ROOT_FORMAT -gt $WARNING_THRESHOLD ]
 then
         echo "OK - "$DEVICE" is "$SHOW_ROOT" used |USED="$ROOT_FORMAT"%;;;;"
         exit $STATE_OK
-elif [ $ROOT_FORMAT -lt $CRITICAL_THRESHOLD ]
+elif [ $ROOT_FORMAT -gt $CRITICAL_THRESHOLD ]
         then
         echo "CRITICAL -"$DEVICE" is "$SHOW_ROOT" used |USED="$ROOT_FORMAT"%;;;;"
         exit $STATE_CRITICAL
-elif [ $ROOT_FORMAT -lt $WARNING_THRESHOLD ]
+elif [ $ROOT_FORMAT -gt $WARNING_THRESHOLD ]
         then
         echo "WARNING - "$DEVICE" is "$SHOW_ROOT" used |USED="$ROOT_FORMAT"%;;;;"
         exit $STATE_WARNING
